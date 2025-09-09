@@ -2,13 +2,13 @@ package empresa;
 
 public class AppEmpleados {
     public static void main(String[] args) {
-        System.out.println("=== TP4 - Gestión de Empleados ===");
+        System.out.println("=== TP4 - Gestion de Empleados ===");
 
         // (1) Constructores sobrecargados
-        Empleado e1 = new Empleado(100, "Ana Gómez", "Desarrolladora", 350000.0);
-        Empleado e2 = new Empleado(101, "Luis Pérez", "QA", 280000.0);
-        Empleado e3 = new Empleado("María López", "UX");
-        Empleado e4 = new Empleado("Carlos Ruiz", "DevOps");
+        Empleado e1 = new Empleado(100, "Ana Gomez", "Desarrolladora", 350000.0);
+        Empleado e2 = new Empleado(101, "Luis Perez", "QA", 280000.0);
+        Empleado e3 = new Empleado("Maria Lopez", "UX");
+        Empleado e4 = new Empleado("Nicolas Viruel", "DevOps");
 
         // (2) Sobrecarga de actualizarSalario()
         //    - por porcentaje (double)
@@ -34,7 +34,7 @@ public class AppEmpleados {
             System.out.println("Excepcion manejada correctamente: " + ex.getMessage());
         }
 
-        // (4) toString legible
+        // (4) toString
         System.out.println("\n-- Estado de empleados (toString) --");
         System.out.println(e1);
         System.out.println(e2);
