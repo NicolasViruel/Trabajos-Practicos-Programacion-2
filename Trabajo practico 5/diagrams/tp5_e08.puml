@@ -1,0 +1,23 @@
+@startuml TP5_Punto_8
+title Punto 8 - Documento, FirmaDigital, Usuario
+
+package Ejercicio8 {
+  class Documento {
+    -titulo : String
+    -contenido : String
+  }
+
+  class FirmaDigital {
+    -codigoHash : String
+    -fecha : String
+  }
+
+  class Usuario {
+    -nombre : String
+    -email : String
+  }
+
+  Documento "1" *-- "1" FirmaDigital : composición
+  FirmaDigital "1" o-- "1" Usuario : agregación
+}
+@enduml

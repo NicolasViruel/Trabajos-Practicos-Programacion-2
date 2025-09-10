@@ -1,0 +1,22 @@
+@startuml TP5_Punto_2
+title Punto 2 - Celular, Batería, Usuario
+
+package Ejercicio2 {
+  class Celular {
+    -imei : String
+    -marca : String
+    -modelo : String
+  }
+  class Bateria {
+    -modelo : String
+    -capacidad : int
+  }
+  class Usuario {
+    -nombre : String
+    -dni : String
+  }
+
+  Celular "1" o-- "1" Bateria : agregación
+  Celular "1" -- "1" Usuario : asociación bidireccional
+}
+@enduml

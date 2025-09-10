@@ -1,0 +1,21 @@
+@startuml TP5_Punto_4
+title Punto 4 - TarjetaDeCredito, Cliente, Banco
+
+package Ejercicio4 {
+  class TarjetaDeCredito {
+    -numero : String
+    -fechaVencimiento : String
+  }
+  class Cliente {
+    -nombre : String
+    -dni : String
+  }
+  class Banco {
+    -nombre : String
+    -cuit : String
+  }
+
+  TarjetaDeCredito "1" -- "1" Cliente : asociación bidireccional
+  TarjetaDeCredito "1" o-- "1" Banco : agregación
+}
+@enduml

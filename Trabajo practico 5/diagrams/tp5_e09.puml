@@ -1,0 +1,23 @@
+@startuml TP5_Punto_9
+title Punto 9 - CitaMedica, Paciente, Profesional
+
+package Ejercicio9 {
+  class CitaMedica {
+    -fecha : String
+    -hora : String
+  }
+
+  class Paciente {
+    -nombre : String
+    -obraSocial : String
+  }
+
+  class Profesional {
+    -nombre : String
+    -especialidad : String
+  }
+
+  CitaMedica "1" --> "1" Paciente : asociación unidireccional
+  CitaMedica "1" --> "1" Profesional : asociación unidireccional
+}
+@enduml

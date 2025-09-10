@@ -1,0 +1,21 @@
+@startuml TP5_Punto_3
+title Punto 3 - Libro, Autor, Editorial
+
+package Ejercicio3 {
+  class Libro {
+    -titulo : String
+    -isbn : String
+  }
+  class Autor {
+    -nombre : String
+    -nacionalidad : String
+  }
+  class Editorial {
+    -nombre : String
+    -direccion : String
+  }
+
+  Libro "1" --> "1" Autor : asociación unidireccional
+  Libro "1" o-- "1" Editorial : agregación
+}
+@enduml

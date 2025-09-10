@@ -1,0 +1,20 @@
+@startuml TP5_Punto_7
+title Punto 7 - Vehiculo, Motor, Conductor
+package Ejercicio7 {
+  class Vehiculo {
+    -patente : String
+    -modelo : String
+  }
+  class Motor {
+    -tipo : String
+    -numeroSerie : String
+  }
+  class Conductor {
+    -nombre : String
+    -licencia : String
+  }
+
+  Vehiculo "1" o-- "1" Motor : agregacion
+  Vehiculo "1" -- "1" Conductor : asociacion bidireccional
+}
+@enduml

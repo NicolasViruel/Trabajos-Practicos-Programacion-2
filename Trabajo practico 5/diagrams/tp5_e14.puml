@@ -1,0 +1,19 @@
+@startuml TP5_Punto_14
+title Punto 14 - EditorVideo, Proyecto, Render
+
+package Ejercicio14 {
+  class Render {
+    -formato : String
+  }
+
+  class Proyecto {
+    -nombre : String
+    -duracionMin : int
+  }
+
+  class EditorVideo
+
+  Render "1" --> "1" Proyecto : asociación unidireccional
+  EditorVideo ..> Render : crea (new)
+}
+@enduml

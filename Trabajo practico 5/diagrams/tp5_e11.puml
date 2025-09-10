@@ -1,0 +1,19 @@
+@startuml TP5_Punto_11
+title Punto 11 - Reproductor, Cancion, Artista
+
+package Ejercicio11 {
+  class Cancion {
+    -titulo : String
+  }
+
+  class Artista {
+    -nombre : String
+    -genero : String
+  }
+
+  class Reproductor
+
+  Cancion "1" --> "1" Artista : asociación unidireccional
+  Reproductor ..> Cancion : usa (parámetro)
+}
+@enduml

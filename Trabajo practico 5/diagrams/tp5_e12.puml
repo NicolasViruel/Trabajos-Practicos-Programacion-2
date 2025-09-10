@@ -1,0 +1,19 @@
+@startuml TP5_Punto_12
+title Punto 12 - Impuesto, Contribuyente, Calculadora
+
+package Ejercicio12 {
+  class Impuesto {
+    -monto : double
+  }
+
+  class Contribuyente {
+    -nombre : String
+    -cuil : String
+  }
+
+  class Calculadora
+
+  Impuesto "1" --> "1" Contribuyente : asociación unidireccional
+  Calculadora ..> Impuesto : usa (parámetro)
+}
+@enduml

@@ -1,0 +1,19 @@
+@startuml TP5_Punto_13
+title Punto 13 - GeneradorQR, Persona, CodigoQR
+
+package Ejercicio13 {
+  class CodigoQR {
+    -valor : String
+  }
+
+  class Persona {
+    -nombre : String
+    -email : String
+  }
+
+  class GeneradorQR
+
+  CodigoQR "1" --> "1" Persona : asociacion unidireccional
+  GeneradorQR ..> CodigoQR : crea (new)
+}
+@enduml

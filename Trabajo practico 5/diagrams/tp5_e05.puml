@@ -1,0 +1,21 @@
+@startuml TP5_Punto_5
+title Punto 5 - Computadora, PlacaMadre, Propietario
+
+package Ejercicio5 {
+  class Computadora {
+    -marca : String
+    -numeroSerie : String
+  }
+  class PlacaMadre {
+    -modelo : String
+    -chipset : String
+  }
+  class Propietario {
+    -nombre : String
+    -dni : String
+  }
+
+  Computadora "1" *-- "1" PlacaMadre : composición
+  Computadora "1" -- "1" Propietario : asociación bidireccional
+}
+@enduml

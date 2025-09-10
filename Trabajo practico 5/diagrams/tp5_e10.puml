@@ -1,0 +1,23 @@
+@startuml TP5_Punto_10
+title Punto 10 - CuentaBancaria, ClaveSeguridad, Titular
+
+package Ejercicio10 {
+  class CuentaBancaria {
+    -cbu : String
+    -saldo : double
+  }
+
+  class ClaveSeguridad {
+    -codigo : String
+    -ultimaModificacion : String
+  }
+
+  class Titular {
+    -nombre : String
+    -dni : String
+  }
+
+  CuentaBancaria "1" *-- "1" ClaveSeguridad : composición
+  CuentaBancaria "1" -- "1" Titular : asociación bidireccional
+}
+@enduml

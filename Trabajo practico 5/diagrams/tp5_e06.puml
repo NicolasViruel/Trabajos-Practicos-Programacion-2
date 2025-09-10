@@ -1,0 +1,23 @@
+@startuml TP5_Punto_6
+title Punto 6 - Reserva, Consumidor, Mesa
+
+package Ejercicio6 {
+  class Reserva {
+    -fecha : String
+    -hora : String
+  }
+
+  class Consumidor {
+    -nombre : String
+    -telefono : String
+  }
+
+  class Mesa {
+    -numero : int
+    -capacidad : int
+  }
+
+  Reserva "1" --> "1" Consumidor : asociación unidireccional
+  Reserva "1" o-- "1" Mesa : agregación
+}
+@enduml
